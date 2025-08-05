@@ -1,5 +1,7 @@
 FROM rust:1-alpine
 
+RUN apk update && apk add musl-dev
+
 WORKDIR /app
 COPY . .
 
